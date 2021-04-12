@@ -45,9 +45,12 @@ export const CurrentQuestion = () => {
           </button>
         </div>
       <h2>{determineCorrectness()}</h2>
-      <button onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
-        Go to next Question
-      </button>
+      {isCorrect === undefined ? null : 
+        <button onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
+          Go to next Question
+        </button>
+      }
+     
     </div>
   )
 }
