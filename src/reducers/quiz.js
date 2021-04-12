@@ -2,8 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Who set the Olympic record for the 100m dash in 2012?', options: ['Usain Bolt', 'Justin Gatlin', 'Tyson Gay', 'Asafa Powell'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'When was Michael Phelps last named male World Swimmer of the Year?', options: ['2012', '2014', '2016', '2018'], correctAnswerIndex: 2 }
+  { id: 1, questionText: 'Do you know where Sentosa is?', options: ['Singapore', 'Portugal', 'Spain', 'Japan'], correctAnswerIndex: 0 },
+  { id: 2, questionText: 'Do you know where the Niagara falls is?', options: ['Mexico', 'USA', 'Canada', 'Argentina'], correctAnswerIndex: 2 },
+  { id: 3, questionText: 'Do you know where Machu Picchu is?', options: ['Mexico', 'Peru', 'Bolivia', 'Argentina'], correctAnswerIndex: 1 },
+  { id: 4, questionText: 'Do you know where Pantheon is?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 1 },
+  { id: 5, questionText: 'Do you know where Parthenon is?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 0 }
 ]
 
 const initialState = {
