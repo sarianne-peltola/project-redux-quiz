@@ -1,3 +1,10 @@
+html {
+  display: flex;
+  justify-content: center;
+  background-image: -webkit-linear-gradient(#28b5b5 0%, #4b778d 100%);
+  /* background-color: #28b5b5; */
+}
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
@@ -5,9 +12,53 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  padding: 20px;
+  height: 100vh
 }
 
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+  h4 {
+    margin: 10px;
+  }
+
+
+  .quiz-container {
+    background-color: white;
+    border-radius: 20px;
+    max-width: 300px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    
+  }
+  
+  .answer-container {
+    display: flex;
+    flex-direction: column;
+    width: 60%;
+  
+  }
+  
+    .square_btn {
+      display: inline-block;
+      padding: 0.5em 1em;
+      text-decoration: none;
+      color: #000;
+      border: solid 1px #000;
+      background: white;
+      border-radius: 3px;
+      transition: .4s;
+      margin: 5px;
+      border-radius: 20px;
+      outline: none;
+    }
+  
+    .square_btn:hover {
+      background: #4b778d;
+      color: #FFF;
+    }

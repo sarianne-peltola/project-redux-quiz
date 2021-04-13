@@ -22,33 +22,33 @@ export const CurrentQuestion = () => {
       return ""
     } else {
       if (isCorrect.isCorrect) {
-        return "correct"
+        return "You are correct 👍"
       } else {
-        return "not correct"
+        return "You are not correct 👎"
       }
     }
   }
-  if (quizOver === true) {
-    return <Summary /> 
-  } else {
-    return (
-      <div>
-        <h1>Question: {question.questionText}</h1>
-        <h2>{question.id}/{questionAmount.length}</h2>
-          <div>
-            {question.options.map((item, index ) => {
-                return <button key={index} onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: index }))}>{item}</button>
-            })}
-          </div>
-        <h2>{determineCorrectness()}</h2>
-        {isCorrect === undefined ? null : 
-          <button onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
-            {question.id < questionAmount.length ? "Next question" : "Show result"}
-          </button>
-        }
-       {quizOver ? Summary(): null }
-      </div>
-    )
-  }
-  }
-  
+    if (quizOver === true) {
+      return <Summary /> 
+    } else {
+      return (
+        <div className="quiz-container">
+          <h1>{question.questionText}</h1> 
+            <div className="answer-container">
+              {question.options.map((item, index ) => {
+                  return <button key={index} className="square_btn" onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: index }))}>{item}</button>
+              })}
+            </div>
+          <p>You have answered {question.id}/{questionAmount.length} questions</p>
+          <h4>{determineCorrectness()}</h4>
+          {isCorrect === undefined ? null : 
+            <button className= "square_btn" onClick={() => dispatch(quiz.actions.goToNextQuestion())}>
+              {question.id < questionAmount.length ? "Next question" : "Show result"}
+            </button>
+          }
+        {quizOver ? Summary(): null }
+        </div>
+      )
+    }
+    }
+    
