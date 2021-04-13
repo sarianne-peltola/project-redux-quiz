@@ -31,18 +31,9 @@ export const CurrentQuestion = () => {
     <div>
       <h1>Question: {question.questionText}</h1>
         <div>
-          <button onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: 1, answerIndex: 0 }))}>
-            Singapore
-          </button>
-          <button onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: 1, answerIndex: 1 }))}>
-            Portugal
-          </button>
-          <button onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: 1, answerIndex: 2 }))}>
-            Spain
-          </button>
-          <button onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: 1, answerIndex: 3 }))}>
-            Japan
-          </button>
+          {question.options.map((item, index ) => {
+              return <button onClick={() => dispatch(quiz.actions.submitAnswer({ questionId: question.id, answerIndex: index }))}>{item}</button>
+          })}
         </div>
       <h2>{determineCorrectness()}</h2>
       {isCorrect === undefined ? null : 
