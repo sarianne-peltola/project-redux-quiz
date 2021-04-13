@@ -2,11 +2,11 @@ import { createSlice } from '@reduxjs/toolkit'
 
 // Change these to your own questions!
 const questions = [
-  { id: 1, questionText: 'Do you know where Sentosa is?', options: ['Singapore', 'Portugal', 'Spain', 'Japan'], correctAnswerIndex: 0 },
-  { id: 2, questionText: 'Do you know where the Niagara falls is?', options: ['Mexico', 'USA', 'Canada', 'Argentina'], correctAnswerIndex: 2 },
-  { id: 3, questionText: 'Do you know where Machu Picchu is?', options: ['Mexico', 'Peru', 'Bolivia', 'Argentina'], correctAnswerIndex: 1 },
-  { id: 4, questionText: 'Do you know where Pantheon is?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 1 },
-  { id: 5, questionText: 'Do you know where Parthenon is?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 0 }
+  { id: 1, questionText: 'Do you know where Sentosa is situated?', options: ['Singapore', 'Portugal', 'Spain', 'Japan'], correctAnswerIndex: 0 },
+  { id: 2, questionText: 'Do you know where Niagara Falls is situated?', options: ['Mexico', 'USA', 'Canada', 'Argentina'], correctAnswerIndex: 2 },
+  { id: 3, questionText: 'Do you know where Machu Picchu is situated?', options: ['Mexico', 'Peru', 'Bolivia', 'Argentina'], correctAnswerIndex: 1 },
+  { id: 4, questionText: 'Do you know where Pantheon is situated?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 1 },
+  { id: 5, questionText: 'Do you know where Parthenon is situated?', options: ['Athens', 'Rome', 'Milan', 'Cairo'], correctAnswerIndex: 0 }
 ]
 
 const initialState = {
