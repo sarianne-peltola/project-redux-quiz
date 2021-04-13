@@ -102,9 +102,6 @@ export const CurrentQuestion = () => {
             );
           })}
         </div>
-        <p>
-          You have answered {question.id}/{questionAmount.length} questions
-        </p>
         <h4>{determineCorrectness()}</h4>
         {isCorrect === undefined ? null : (
           <button
