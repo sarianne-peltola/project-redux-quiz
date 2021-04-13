@@ -8,9 +8,6 @@ export const CurrentQuestion = () => {
   const question = useSelector(
     (state) => state.quiz.questions[state.quiz.currentQuestionIndex]
   );
-  const answer = useSelector(
-    (state) => state.quiz.questions[state.quiz.correctAnswerIndex]
-  );
   const quizOver = useSelector((state) => state.quiz.quizOver);
   const isCorrect = useSelector(
     (state) => state.quiz.answers[state.quiz.currentQuestionIndex]
