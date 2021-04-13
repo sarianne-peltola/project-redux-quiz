@@ -24,6 +24,41 @@ code {
     margin: 10px;
   }
 
+  .counter {
+    display:flex;
+  }
+
+  .counter-number, .counter-number2, .counter-number3, .counter-number4, .counter-number5 {
+    margin: 5px;
+    border-radius: 50%;
+    border: 1px solid black;
+    width: 25px;
+    height: 25px;
+  }
+
+  .counter-number:first-child{
+    background-color: #28b5b5;
+  }
+
+  .counter-number2:nth-child(2){
+    background-color: #28b5b5;
+  }
+
+  .counter-number3:nth-child(3){
+    background-color: #28b5b5;
+  }
+
+  .counter-number4:nth-child(4){
+    background-color: #28b5b5;
+  }
+
+  .counter-number5:nth-child(5){
+    background-color: #28b5b5;
+  }
+  
+  
+  
+  
 
   .quiz-container {
     background-color: white;
